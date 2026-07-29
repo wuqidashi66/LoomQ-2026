@@ -1,5 +1,13 @@
-# Public evaluator baseline: no third-party dependencies.
-# Add project dependencies below and pin every version exactly, for example:
-# amazon-braket-sdk==<tested-version>
-# spinqit==<tested-version>
-# pyqpanda==<tested-version>
+# L1 依赖 — 精确锁定版本
+numpy==1.26.4
+setuptools==69.5.1
+antlr4-python3-runtime==4.9.2
+autograd==1.5
+torch==2.13.0
+scipy==1.15.3
+scikit-learn==1.7.2
+requests==2.34.2
+spinqit==0.2.4
+amazon-braket-sdk==1.50.0
+amazon-braket-default-simulator==1.27.0
+# pyqpanda==3.8.5  # 需要从本地 wheel 安装或配置自定义 index
