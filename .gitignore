@@ -5,3 +5,21 @@
 **/.DStore
 __pycache__/
 *.py[cod]
+# Dev files — not part of submission
+*.log
+docs/
+submissions/
+starter-kit/runs/
+starter-kit/my_tests/
+starter-kit/braket_tools/
+starter-kit/quera_tools/
+starter-kit/web_agent.py
+starter-kit/web_agent_debug.log
+starter-kit/check_env.py
+starter-kit/TEST_COMMANDS.md
+starter-kit/TEST_REFERENCE.md
+starter-kit/PROJECT_README.md
+starter-kit/riscv_quantum_emulator.py
+starter-kit/.real_hardware_config.json
+starter-kit/.real_hardware_config.json.example
+starter-kit/report.json
