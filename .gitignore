@@ -23,3 +23,5 @@ starter-kit/riscv_quantum_emulator.py
 starter-kit/.real_hardware_config.json
 starter-kit/.real_hardware_config.json.example
 starter-kit/report.json
+.env
+starter-kit/.env
