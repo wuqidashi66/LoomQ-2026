@@ -8,16 +8,8 @@
   "temperature": 0,
   "stream": false,
   "per_case": {
-    "max_calls": 3,
-    "max_input_tokens": 8000,
-    "max_output_tokens": 2000,
     "timeout_seconds": 120
   },
   "formal_case_count": 12,
-  "team_theoretical_maximum": {
-    "calls": 36,
-    "input_tokens": 96000,
-    "output_tokens": 24000
-  },
   "organizer_api_available_before_scoring": false
 }

@@ -110,11 +110,8 @@ python3 starter-kit/prepare_submission.py --team-id <GITHUB_USERNAME>
 | `LOOMQ_LLM_API_KEY` | 当前运行凭证 |
 | `LOOMQ_LLM_MODEL` | 当前模型；正式评测为 `deepseek-v4-flash` |
 | `LOOMQ_LLM_TIMEOUT_SECONDS` | 单次请求超时 |
-| `LOOMQ_LLM_MAX_CALLS` | 当前 case 最多调用次数 |
-| `LOOMQ_LLM_MAX_INPUT_TOKENS` | 当前 case 累计输入 Token 上限 |
-| `LOOMQ_LLM_MAX_OUTPUT_TOKENS` | 当前 case 累计输出 Token 上限 |
 
-正式限制为每个 case 最多 3 次调用、8,000 输入 Token、2,000 输出 Token 和 120 秒；两组固定私有种子共 12 个 case，因此每队理论上限为 36 次调用、96,000 输入 Token 和 24,000 输出 Token。机器可读版本见 `l2_policy.json`。
+正式限制为每个 case 120 秒；两组固定私有种子共 12 个 case。机器可读版本见 `l2_policy.json`。
 
 `llm_client.py` 是可选的无依赖传输示例，不包含 Prompt、Agent 策略或参考答案。使用自己的 DeepSeek Key 调试时可设置：
 
@@ -123,9 +120,6 @@ export LOOMQ_LLM_BASE_URL=https://api.deepseek.com
 export LOOMQ_LLM_API_KEY=<YOUR_OWN_KEY>
 export LOOMQ_LLM_MODEL=deepseek-v4-flash
 export LOOMQ_LLM_TIMEOUT_SECONDS=120
-export LOOMQ_LLM_MAX_CALLS=3
-export LOOMQ_LLM_MAX_INPUT_TOKENS=8000
-export LOOMQ_LLM_MAX_OUTPUT_TOKENS=2000
 python3 evaluator.py --level l2
 ```
 

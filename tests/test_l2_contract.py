@@ -47,7 +47,7 @@ class PublicL2ContractTests(unittest.TestCase):
         self.assertEqual(policy["thinking"], {"type": "disabled"})
         self.assertEqual(
             policy["per_case"],
-            {"max_calls": 3, "max_input_tokens": 8000, "max_output_tokens": 2000, "timeout_seconds": 120},
+            {"timeout_seconds": 120},
         )
         self.assertFalse(policy["organizer_api_available_before_scoring"])
 
@@ -68,8 +68,7 @@ class PublicL2ContractTests(unittest.TestCase):
                 "LOOMQ_LLM_API_KEY": "local-key",
                 "LOOMQ_LLM_MODEL": "local-model",
                 "LOOMQ_LLM_TIMEOUT_SECONDS": "2",
-                "LOOMQ_LLM_MAX_OUTPUT_TOKENS": "2000",
-            }
+                }
             with mock.patch.dict(os.environ, environment, clear=True):
                 response = load_client().chat_completion([{"role": "user", "content": "hello"}])
         finally:

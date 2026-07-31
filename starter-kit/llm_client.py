@@ -24,7 +24,7 @@ def _configuration() -> tuple[str, str, str, float, int]:
         raise RuntimeError("missing required LoomQ L2 environment variable(s): " + ", ".join(missing))
     try:
         timeout = float(os.environ.get("LOOMQ_LLM_TIMEOUT_SECONDS", "120"))
-        max_output = int(os.environ.get("LOOMQ_LLM_MAX_OUTPUT_TOKENS", "2000"))
+        max_output = int(os.environ.get("LOOMQ_LLM_MAX_OUTPUT_TOKENS", "4096"))
     except ValueError as exc:
         raise RuntimeError("invalid LoomQ L2 numeric environment variable") from exc
     if timeout <= 0 or max_output <= 0:

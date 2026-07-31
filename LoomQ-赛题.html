@@ -420,7 +420,7 @@ footer p{margin-top:10px;font-size:16px;color:var(--ink-soft);letter-spacing:.08
     <li><strong>智能选后端</strong>：根据比特数、拓扑结构、排队与成本约束推荐后端。</li>
   </ul>
   <p><strong>统一模型要求</strong>：正式 L2 评分由 DeepSeek <code>deepseek-v4-flash</code> 驱动；最终答案仍由客观测试判定，不使用 LLM 充当裁判。组委会赛前不提供 API 地址、API Key、代理或额度。选手可自备 DeepSeek API，或使用其他 OpenAI-compatible 服务进行本地调试。</p>
-  <p>正式评测使用 2 个固定私有种子，共 12 个 L2 case。每个 case 最多调用 3 次，累计最多 8,000 输入 Token、2,000 输出 Token，总时限 120 秒；至少完成一次有效的模型服务调用才具备得分资格。组委会模型服务或网络发生基础设施异常时，不直接判定选手失败，服务恢复后按统一规则复评。</p>
+  <p>正式评测使用 2 个固定私有种子，共 12 个 L2 case，每个 120 秒；至少完成一次有效的模型服务调用才具备得分资格。组委会模型服务或网络发生基础设施异常时，不直接判定选手失败，服务恢复后按统一规则复评。</p>
 
   <h3><span class="tag t3">L 3</span>Hybrid-QASM × RISC-V 混合编译（硬核挑战 · 15 分）</h3>
   <p>实现经典-量子混合程序编译。输入一段 <strong>Hybrid-QASM</strong>（语法定义见下），你的编译器需要输出两部分：</p>
